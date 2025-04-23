@@ -459,7 +459,7 @@ export const converters = {
   span: async (ele: HTMLElement, ctx: Context) => {
     const ans = await converters.recursive(ele, ctx)
 
-    if (ele.classList.contains('bedrock-server')) {
+    if (ele.classList.contains('bedrock-server') || ele.classList.contains('MC_Effect_TextHighlightA')) {
       // Inline code.
       const prefix = '`'
       const suffix = '`'
