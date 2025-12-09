@@ -537,7 +537,8 @@ export function resolveUrl(url: string) {
  * Get bugs from BugCenter.
  */
 export async function getBugs(): Promise<ResolvedBugs> {
-  return new Promise((rs, rj) => {
+  return new Promise((rs, rj) => {rs({})
+  /*
     GM.xmlHttpRequest({
       method: 'GET',
       url: config.bugCenter.translation,
@@ -555,11 +556,13 @@ export async function getBugs(): Promise<ResolvedBugs> {
       onerror: (e) => rj(e),
       ontimeout: () => rj(new Error('Time out')),
     })
+      */
   })
 }
 
 export async function getBugsTranslators(): Promise<ResolvedBugs> {
-  return new Promise((rs, rj) => {
+  return new Promise((rs, rj) => {rs({})
+  /*
     GM.xmlHttpRequest({
       method: 'GET',
       url: config.bugCenter.translator,
@@ -577,11 +580,13 @@ export async function getBugsTranslators(): Promise<ResolvedBugs> {
       onerror: (e) => rj(e),
       ontimeout: () => rj(new Error('Time out')),
     })
+      */
   })
 }
 
 export async function getTranslatorColor(): Promise<ResolvedBugs> {
-  return new Promise((rs, rj) => {
+  return new Promise((rs, rj) => {rs({})
+    /*
     GM.xmlHttpRequest({
       method: 'GET',
       url: config.bugCenter.color,
@@ -598,7 +603,7 @@ export async function getTranslatorColor(): Promise<ResolvedBugs> {
       onabort: () => rj(new Error('Aborted')),
       onerror: (e) => rj(e),
       ontimeout: () => rj(new Error('Time out')),
-    })
+     )*/
   })
 }
 
