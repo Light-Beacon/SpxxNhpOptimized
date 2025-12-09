@@ -19,3 +19,25 @@ lerna-debug.log*
 
 # pnpm
 package-lock.json
+
+# Yarn Berry (Plug'n'Play) artifacts
+.pnp.cjs
+.pnp.loader.mjs
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/patches/
+
+# Workspace-specific build outputs
+packages/userscript/dist/
+packages/tweeter/out/
+
+# Coverage & misc
+coverage/
+.nyc_output/
+*.log
+
+# IDEs
+.idea/
+.history/

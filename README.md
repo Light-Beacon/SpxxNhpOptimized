@@ -31,10 +31,27 @@ will be utilized by the SPXX User Script™ to auto translate the "Fixed bugs" s
 
 Development environment: [Node.js LTS][node] and [Yarn][yarn]
 
-- `yarn` to install dependencies.
-- `yarn run build` to compile the TypeScript code.
-- `yarn run start` to start the compiled SPXX Web Dashboard™.
-- `./out/user_script.js` is the compiled SPXX User Script™.
+This repo is a monorepo with multiple packages under `packages/`. Build commands live in each package:
+
+- `@spxx/userscript` (userscript)
+	- Install: `yarn`
+	- Build: `yarn workspace @spxx/userscript run build`
+	- Watch: `yarn workspace @spxx/userscript run watch`
+	- Output: `packages/userscript/dist/bundle.user.js`
+
+- `@spxx/tweeter` (server utilities)
+	- Install: `yarn`
+	- Build: `yarn workspace @spxx/tweeter run build`
+	- Output: `packages/tweeter/out/`
+
+Alternatively, build all workspaces:
+
+- `yarn workspaces foreach -v run build`
+
+Notes:
+
+- Running `yarn run build` at the repo root will fail because the root `package.json` does not define a `build` script. Use workspace-specific commands above.
+- This repo also includes `pnpm-workspace.yaml`, but the configured package manager is Yarn (`packageManager: yarn@4.0.0`). Prefer Yarn commands unless you intentionally use pnpm.
 
 [markdown]: https://en.wikipedia.org/wiki/Markdown
 [bugs]: https://spx.spgoding.com/bugs

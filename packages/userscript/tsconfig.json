@@ -7,6 +7,6 @@
     "rootDir": ".",
     "resolveJsonModule": true
   },
-  "include": ["package.json", "rollup.config.ts"],
+  "include": ["package.json", "src/**/*"],
   "extends": "../../tsconfig.base.json"
 }

@@ -7,9 +7,9 @@
   "author": "SPXFellow",
   "license": "CC0-1.0",
   "scripts": {
-    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --configImportAttributesKey with",
-    "prepack": "pnpm build",
-    "watch": "rollup -w --config rollup.config.ts --configPlugin @rollup/plugin-typescript --configImportAttributesKey with"
+    "build": "rollup --config rollup.config.mjs",
+    "prepack": "yarn run build",
+    "watch": "rollup -w --config rollup.config.mjs"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
