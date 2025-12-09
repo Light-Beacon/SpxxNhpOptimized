@@ -52,7 +52,8 @@ export const initConfig = new Promise((resolve) => {
   })
 })
 
-GM.registerMenuCommand('Edit Configuration', () => GM_config.open())
+// GM.registerMenuCommand('Edit Configuration', () => GM_config.open())
+// Disable Menu Command because UserScript of Safari did not support it.
 
 function fillExport() {
   const src = GM_config.get('bugSource') as string

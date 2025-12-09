@@ -22,7 +22,8 @@ export async function minecraftNet() {
     button.onclick = async () => {
       button.innerText = 'Processing...'
       const markdown = await convertMCArticleToMarkdown(document, url)
-      GM.setClipboard(markdown, { type: 'text', mimetype: 'text/plain' })
+      //GM.setClipboard(markdown, { type: 'text', mimetype: 'text/plain' })
+      await navigator.clipboard.writeText(markdown)
       button.innerText = 'Copied Markdown!'
       setTimeout(() => (button.innerText = 'Copy Markdown'), 5_000)
     }
