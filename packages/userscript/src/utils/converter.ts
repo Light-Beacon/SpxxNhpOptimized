@@ -543,7 +543,7 @@ export async function getBugs(): Promise<ResolvedBugs> {
       url: config.bugCenter.translation,
       fetch: true,
       nocache: true,
-      timeout: 7_000,
+      timeout: 1_000,
       onload: (r) => {
         try {
           rs(JSON.parse(r.responseText))
@@ -565,7 +565,7 @@ export async function getBugsTranslators(): Promise<ResolvedBugs> {
       url: config.bugCenter.translator,
       fetch: true,
       nocache: true,
-      timeout: 7_000,
+      timeout: 1_000,
       onload: (r) => {
         try {
           rs(JSON.parse(r.responseText))
@@ -587,7 +587,7 @@ export async function getTranslatorColor(): Promise<ResolvedBugs> {
       url: config.bugCenter.color,
       fetch: true,
       nocache: true,
-      timeout: 7_000,
+      timeout: 1_000,
       onload: (r) => {
         try {
           rs(JSON.parse(r.responseText))
